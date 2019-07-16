@@ -1,0 +1,155 @@
+/**index.wxss**/
+
+.bannerbox {
+  height: 162px;
+  width: 98%;
+  position: relative;
+  margin-top:16rpx;
+}
+
+.banner {
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+
+.bannerimg {
+  height: 162px;
+  width: 314px;
+  display: none;
+  text-align: center;
+  border-radius: 10rpx;
+}
+
+.banner .active {
+  height: 162px;
+  width: 314px;
+  display: inline-block;
+}
+
+.banner-btn {
+  width: 100%;
+  position: absolute;
+  bottom: 20rpx;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.banner-btn view {
+  width: 20rpx;
+  height: 20rpx;
+  margin: 10rpx;
+  background-color:#CC0202;
+  border-radius: 50%;
+}
+
+.banner-btn .active {
+  background-color: #fff;
+}
+
+/*nav*/
+
+.nav {
+  display: flex;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  padding-top: 20rpx;
+}
+
+.nav-box {
+  flex: 1;
+}
+
+.nav-item {
+  height:80px;
+  width: 80px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.nav-item image {
+  height: 48px;
+  width: 48px;
+  margin: 0 auto;
+}
+
+.nav-item text {
+  display: inline-flex;
+  font-size: 12px;
+  color: #515151;
+  text-align: center;
+}
+
+/*graphicGrp*/
+
+.graphic {
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.graphic-grp-name {
+  width: 750rpx;
+  height: 50rpx;
+  padding: 10rpx 0;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #E0E0E0;
+}
+
+.graphic-grp-name text {
+  font-size: 34rpx;
+  line-height: 50rpx;
+  font-weight:bold;
+  color: #000;
+  padding-left: 30rpx;
+  background: url("../../images/section_title_tip.png") left no-repeat;
+}
+
+.graphic-grp-name navigator {
+  font-size: 26rpx;
+  color:#000;
+  padding-right: 20rpx;
+}
+
+.graphic-grp-item navigator {
+  width: 340rpx;
+}
+
+.graphic-grp-item text {
+  margin: 20rpx 0;
+  color: #000;
+  font-size: 30rpx;
+}
+
+.graphic-grp-item wx-text:last-child {
+  margin-top: 0;
+  color: #858585;
+  font-size: 28rpx;
+}
+
+/*更多*/
+
+.navigator-more {
+  padding: 10rpx 0 40rpx;
+  color: #515151;
+  font-size:30rpx;
+}
+/*footer*/
+.footer{
+   text-align: center;
+    height: 50rpx;
+    border-top:1px solid #eee;
+    padding: 20rpx 0;
+}
+.footer view{
+    width: 700rpx;
+   
+}
+.footer text{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color: #aaaaaa;
+    font-size: 12px;
+    
+}

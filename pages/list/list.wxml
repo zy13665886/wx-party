@@ -1,0 +1,26 @@
+<!-- index.wxml -->
+
+<import src="/template/article.wxml" />
+
+<view class="container">
+  <!-- 头部导航 -->
+  <view class="top_tabs">
+    <scroll-view class="sv_container" scroll-x="true">
+      <block wx:for="{{categoryTabs}}" wx:key="lanmu_id" wx:if="{{ item.selected }}">
+        <view class="sv_item {{ currentTab==item.lanmu_id ? 'active':'' }}" bindtap="changeCategory" data-id="{{ item.lanmu_id }}">
+          {{ item.lanmu_name }}
+        </view>
+      </block>
+    </scroll-view>
+    <image bindtap="manageTabs" class="sv-manager" src="/image/icon-manage.png"></image>
+  </view>
+ 
+  <view class="articles">
+    <block wx:for="{{ articles }}" wx:key="id">
+      <template is="{{ 'newsStyle' + item.style }}" data="{{ ...item }}" />
+    </block>
+  </view>
+
+  <include src="/template/footer.wxml" />
+
+</view>

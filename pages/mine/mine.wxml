@@ -1,0 +1,30 @@
+<!--pages/mine/mine.wxml-->
+<view class="mycontainer">
+  <import src="/template/signin.wxml" />
+  <template is="signin" data="{{...item}}" />
+
+  <view class="user flex-wrap">
+    <view class="avatar flex-item">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    </view>
+    <view class="user-info flex-item">
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <text class="edit">查看或编辑个人党员信息</text>
+    </view>
+  </view>
+
+  <view class="my">
+    <block wx:for="{{mine}}" wx:for-item="item">
+      <view class="my-item flex-wrap">
+        <view class="myitem-icon flex-item">
+          <image src="{{item.imgurl}}"></image>
+        </view>
+        <view class="myitem-name flex-item">
+          <text>{{item.title}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <button type="warn" class="signinout"> 退出登录</button>
+</view>

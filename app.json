@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/list/list",
+    
+    "pages/mine/mine",
+    "pages/logs/logs",
+    "pages/pay/pay",
+    "pages/list/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#CC0202",
+    "navigationBarTitleText": "党建网管理系统",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#858585",
+    "selectedColor": "#CC0202",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "skins/icons/home.png",
+        "selectedIconPath": "skins/icons/home_select.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "iconPath": "skins/icons/book.png",
+        "selectedIconPath": "skins/icons/book_select.png",
+        "text": "学习"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "skins/icons/mine.png",
+        "selectedIconPath": "skins/icons/mine_select.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}

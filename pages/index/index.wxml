@@ -1,0 +1,85 @@
+<!--index.wxml-->
+<import src="/template/article.wxml"/>
+<view class="container">
+  <!--search-->
+  <view class="search flex">
+    <view class="search-left">
+      <image src="../../skins/icons/search.png"></image>
+      <input placeholder="党建文章" placeholder-class="search-placeholder" />
+    </view>
+  </view>
+  <!--bannerbox-->
+  <view class="bannerbox">
+    <!--bannerImg-->
+    <view class="banner flex">
+      <block wx:for="{{banner.bannerimg}}" wx:for-index="idx" wx:for-item="item">
+        <view class="banner-item">
+          <navigator url="{{item.navigator}}">
+            <image src="{{item.imgurl}}" class="bannerimg {{item.class}}"></image>
+          </navigator>
+        </view>
+      </block>
+    </view>
+    <!--bannerBtn-->
+    <view class="banner-btn flex">
+      <block wx:for="{{banner.bannerimg}}" wx:for-index="idx" wx:for-item="item">
+        <view data-index="{{idx}}" bindtap="bindStlBanner" class="{{item.class}}"></view>
+      </block>
+    </view>
+  </view>
+  <!--nav-->
+  <view class="nav flex">
+    <block wx:for="{{nav}}" wx:for-item="item">
+      <view class="nav-box">
+        <navigator url="{{item.navigator}}" class="nav-item">
+          <image src="{{item.imgurl}}"></image>
+          <text>{{item.title}}</text>
+        </navigator>
+      </view>
+
+    </block>
+  </view>
+  <!--ad-->
+  <view class="ad flex">
+    <block wx:for="{{ad}}" wx:for-item="item">
+      <navigator url="{{item.navigator}}">
+        <image src="{{item.imgurl}}"></image>
+      </navigator>
+    </block>
+  </view>
+  <!--图文组-->
+  <view class="graphic flex">
+    <block wx:for="{{course_grp}}" wx:for-idx="idx" wx:for-item="block_item">
+      <view class="graphic-grp-name flex">
+        <text>{{block_item.title.left}}</text>
+        <navigator url="{{block_item.navigator}}">{{block_item.title.right}} ></navigator>
+      </view>
+
+      <view class="graphic-grp-item flex">
+        <block wx:for="{{block_item.courses}}" wx:for-item="item">
+          <navigator url="{{item.navigator}}" class="flex flex-col">
+            <image src="{{item.imgurl}}"></image>
+            <text>{{item.title}}</text>
+            <text>{{item.source}}</text>
+          </navigator>
+        </block>
+      </view>
+    </block>
+  </view>
+  <!-- 新闻列表部分 -->
+  <view class="news">
+    <block wx:for="{{news.item}}" wx:key="news">
+      <block wx:if="{{item.type == 'doc'}}">
+        <!--文章-->
+        <template is="article" data="{{item}}" />
+      </block>
+    </block>
+  </view>
+  <!--查看全部-->
+  <!-- <view class="navigator-more">
+    <navigator url="{{moreCourses.url}}">{{moreCourses.title}}</navigator>
+  </view> -->
+
+  <!-- 底部声明 -->
+  <include src="/template/footer.wxml" />
+</view>
